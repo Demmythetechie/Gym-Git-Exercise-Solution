@@ -288,4 +288,153 @@ remote:
 To github.com:Demmythetechie/Gym-Git-Exercise-Solution.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 
+BUNDLE 2
+#Exercise 2 
 
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/bundle-2)
+λ git checkout main                                                           
+Switched to branch 'main'                                                     
+                                                                              
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(main)       
+λ git pull git@github.com:Demmythetechie/Gym-Git-Exercise-Solution.git        
+remote: Enumerating objects: 8, done.                                         
+remote: Counting objects: 100% (8/8), done.                                   
+remote: Compressing objects: 100% (4/4), done.                                
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0                  
+Unpacking objects: 100% (4/4), 1.44 KiB | 49.00 KiB/s, done.                  
+From github.com:Demmythetechie/Gym-Git-Exercise-Solution                      
+ * branch            HEAD       -> FETCH_HEAD                                 
+Updating 01f65ad..ddac3ae                                                     
+Fast-forward                                                                  
+ README.md     |  5 +++++                                                     
+ services.html | 11 +++++++++++                                               
+ 2 files changed, 16 insertions(+)                                            
+ create mode 100644 services.html                                             
+                                                                              
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(main)       
+λ git branch ft/service-redesign                                              
+                                                                              
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(main)       
+λ git checkout ft/service-redesign                                            
+Switched to branch 'ft/service-redesign'  
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ nl services.html
+     1  <!DOCTYPE html>
+     2  <html lang="en">
+     3          <head>
+     4                  <title>Home</html>
+     5          </head>
+     6          <body>
+     7                  <div>
+     8                          <p>This is the service page</p>
+     9                  </div>
+    10          </body>
+    11  </html>
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ sed -i "8 a \\t\t\t<p>No services rendered for now<p>" services.html
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)               
+λ git add services.html                                                                              
+                                                                                                     
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)               
+λ git commit -m "changes added to services.html in ft/service-redesign branch"                       
+[ft/service-redesign c7c139f] changes added to services.html in ft/service-redesign branch           
+ 1 file changed, 2 insertions(+), 1 deletion(-)                                                      
+                                                                                                     
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)               
+λ git push git@github.com:Demmythetechie/Gym-Git-Exercise-Solution.git                               
+Enumerating objects: 5, done.                                                                        
+Counting objects: 100% (5/5), done.                                                                  
+Delta compression using up to 4 threads                                                              
+Compressing objects: 100% (3/3), done.                                                               
+Writing objects: 100% (3/3), 353 bytes | 176.00 KiB/s, done.                                         
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0                                                 
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.                                
+remote:                                                                                              
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:                       
+remote:      https://github.com/Demmythetechie/Gym-Git-Exercise-Solution/pull/new/ft/service-redesign
+remote:                                                                                              
+To github.com:Demmythetechie/Gym-Git-Exercise-Solution.git                                           
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ git checkout main
+Switched to branch 'main'
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(main)
+λ sed -i "8 a \\t\t\t<p>we are back to the main branch for now</p>" services.html
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(main)
+λ git add services.html                                                
+                                                                       
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(main)
+λ git commit -m "changes added to services.html in main branch"        
+[main fac44e9] changes added to services.html in main branch           
+ 1 file changed, 3 insertions(+), 2 deletions(-)                       
+                                                                       
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(main)
+λ git push git@github.com:Demmythetechie/Gym-Git-Exercise-Solution.git 
+Enumerating objects: 5, done.                                          
+Counting objects: 100% (5/5), done.                                    
+Delta compression using up to 4 threads                                
+Compressing objects: 100% (3/3), done.                                 
+Writing objects: 100% (3/3), 356 bytes | 178.00 KiB/s, done.           
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0                   
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.  
+To github.com:Demmythetechie/Gym-Git-Exercise-Solution.git             
+   ddac3ae..fac44e9  main -> main                                      
+                                                                       
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(main)
+λ git checkout ft/service-redesign                                     
+Switched to branch 'ft/service-redesign'                               
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ cat services.html
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title>Home</html>
+        </head>
+        <body>
+                <div>
+                        <p>This is the service page</p>
+<<<<<<< HEAD
+                        <p>No services rendered for now<p>
+                </div>
+=======
+                        <p>we are back to the main branch for now</p>
+                </div>
+>>>>>>> main
+        </body>
+</html>
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ git add -A
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ git commit -m "resolved conflicts about to merge"
+[ft/service-redesign 3ca8dae] resolved conflicts about to merge
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ git merge main
+Already up to date.
+
+C:\Users\Ejitade Isaac\Downloads\cmder\Gym-Git-Exercise-Solutions(ft/service-redesign)
+λ git push git@github.com:Demmythetechie/Gym-Git-Exercise-Solution.git
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 388 bytes | 64.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Demmythetechie/Gym-Git-Exercise-Solution.git
+   c7c139f..3ca8dae  ft/service-redesign -> ft/service-redesign
